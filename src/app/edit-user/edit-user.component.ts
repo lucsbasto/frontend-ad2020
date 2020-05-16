@@ -45,14 +45,22 @@ export class EditUserComponent implements OnInit {
     this.amigoService.update(this.userId, this.formEdit.value).subscribe(
       (res) => {
         Swal.fire({
-          title: 'Sucesso',
-          text: 'Usuário editado com sucesso',
+          title: 'Sucess',
+          text: 'User updated successfully',
           icon: 'success',
           confirmButtonText: 'Ok',
         });
         this.router.navigate(['/']);
       },
-      (error) => console.log(error)
+      (error) => {
+        Swal.fire({
+          title: 'Error',
+          text: `${error.error.error}`,
+          icon: 'error',
+          confirmButtonText: 'Ok',
+        });
+        this.router.navigate(['/']);
+      }
     );
   }
 }

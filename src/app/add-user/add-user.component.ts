@@ -29,14 +29,21 @@ export class AddUserComponent implements OnInit {
     this.amigoService.add(this.formAdd.value).subscribe(
       (res) => {
         Swal.fire({
-          title: 'Sucesso',
-          text: 'Usuário adicionado com sucesso',
+          title: 'Sucess',
+          text: 'User added successfully',
           icon: 'success',
           confirmButtonText: 'Ok',
         });
         this.router.navigate(['/']);
       },
-      (erro) => console.log(erro)
+      (error) => {
+        Swal.fire({
+          title: 'Error',
+          text: `${error.error.error}`,
+          icon: 'error',
+          confirmButtonText: 'Ok',
+        });
+      }
     );
   }
 }
