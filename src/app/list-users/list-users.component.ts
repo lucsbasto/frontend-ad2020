@@ -20,8 +20,9 @@ export class ListUsersComponent implements OnInit {
     this.amigoService.raffle().subscribe(
       (res) => {
         Swal.fire({
-          title: 'Sucess',
-          text: 'All friends were raffled and sent by email',
+          title: 'Sucesso',
+          text:
+            'Todos os amigos secretos foram sorteados e enviados por email!',
           icon: 'success',
           confirmButtonText: 'Ok',
         });
@@ -36,7 +37,7 @@ export class ListUsersComponent implements OnInit {
       },
       (error) => {
         Swal.fire({
-          title: 'Error',
+          title: 'Erro',
           text: `${error.message}`,
           icon: 'error',
           confirmButtonText: 'Ok',
@@ -49,8 +50,8 @@ export class ListUsersComponent implements OnInit {
     this.amigoService.delete(id).subscribe(
       (res) => {
         Swal.fire({
-          title: 'Sucess',
-          text: 'User successfully deleted!',
+          title: 'Sucesso',
+          text: 'Usuário deletado com sucesso!',
           icon: 'success',
           confirmButtonText: 'Ok',
         });
