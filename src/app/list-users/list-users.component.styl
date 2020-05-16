@@ -16,7 +16,8 @@ h2
   display flex
   flex-direction column
   align-items center
-  background-color lightgrey
+  background-color transparent
+  padding 10px
   .mdc-table
     width 100%
     margin auto
@@ -46,8 +47,9 @@ h2
     th,
     td
       padding 6px 48px 6px 14px
-      font-size 0.813em
+      font-size 1.100em
       color dimgrey
+      font-weight bold
 
     th:last-child,
     td:last-child
@@ -56,7 +58,7 @@ h2
       text-align center
 
     tbody td
-      font-size 0.844em
+      font-size 0.900em
       font-weight bold
 
     button i
@@ -68,7 +70,9 @@ h2
       &:hover
         cursor pointer
         color #576033
-
+      &:active
+        box-shadow 0 5px 10px rgba(0, 0, 0, 0.2)
+        transform:translateY(2px)
 .actions
   padding-top 30px
   text-align center
@@ -76,15 +80,19 @@ h2
   button
     display: inline-table
     border solid 2px #acbb78
-    padding 5px 30px
+    padding 10px 50px
     font-size  16px
     font-weight bold
-    margin 0 10px
+    margin 0px 20px 20px 0px
     border-radius: 10px
     &:hover
       background-color #acbb78
       color #ffffff
       cursor pointer
+    &:active
+      background-color #acbb78
+      box-shadow 0 5px 10px rgba(0, 0, 0, 0.2)
+      transform:translateY(2px)
 
 
 /*@media screen and (max-width: 800px) {
