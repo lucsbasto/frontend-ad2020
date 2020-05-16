@@ -1,0 +1,10 @@
+<h2>
+  Editar usuário do jogo
+</h2>
+<ng-container *ngIf="!loading">
+  <form [formGroup]="formEdit">
+    <input formControlName="name" type="text" placeholder="Nome Completo" />
+    <input formControlName="email" type="email" placeholder="E-mail do usuário" />
+    <button (click)="update()">Editar usuário <i class="fas fa-user-plus"></i></button>
+  </form>
+</ng-container>

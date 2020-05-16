@@ -1,0 +1,9 @@
+<h2>
+  Participantes do jogo
+</h2>
+
+<form [formGroup]="formAdd">
+  <input formControlName="name" type="text" placeholder="Nome Completo" />
+  <input formControlName="email" type="email" placeholder="E-mail do usuário" />
+  <button (click)="add()">Adicionar Amigo <i class="fas fa-user-plus"></i></button>
+</form>

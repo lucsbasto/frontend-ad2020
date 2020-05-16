@@ -1,0 +1,45 @@
+<h2>
+  Participantes do jogo
+</h2>
+<ng-container *ngIf="users">
+  <table>
+    <thead>
+      <tr>
+        <th>
+          Nome Completo
+        </th>
+        <th>
+          Email
+        </th>
+        <th>
+          Ações
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let user of users">
+        <tr>
+          <td>
+            {{ user.name }}
+          </td>
+          <td>
+            {{ user.email }}
+          </td>
+          <td>
+            <button routerLink="/edit/{{ user._id }}">
+              <i class="fas fa-user-edit"></i>
+            </button>
+            <button (click)="delete(user._id)">
+              <i class="fas fa-trash"></i>
+            </button>
+          </td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</ng-container>
+
+<div class="actions">
+  <button routerLink="/add">Adicionar <i class="fas fa-user-plus"></i></button>
+  <button (click)="raffle()">Sortear <i class="fas fa-random"></i></button>
+</div>

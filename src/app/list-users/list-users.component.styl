@@ -1,0 +1,63 @@
+h2
+  font-size 24px
+  font-weight bold
+  padding-bottom: 20px
+
+  &:before
+    content ''
+    display inline-table
+    vertical-align middle
+    width: 15px
+    height 15px
+    border-radius 0 50% 50% 50%
+    background-color #acbb78
+
+table
+  width 100%
+  border solid 1px #6c6c6c
+  padding 10px
+
+  thead tr
+    background-color #bebebe
+
+    th
+      padding 5px
+      font-size: 16px
+      border: 15px
+
+
+  tbody
+    td
+      padding 5px
+      font-size 14px
+      padding 20px
+
+    tr:nth-child(2n)
+      background-color #fff
+
+    tr:nth-child(2n+1)
+      background-color #e9e9e9
+
+    i
+      font-size 20px
+      padding-left: 20px
+      color #576033
+
+
+.actions
+  padding-top 30px
+  text-align center
+
+  button
+    display: inline-table
+    border solid 2px #acbb78
+    padding 5px 30px
+    font-size  16px
+    font-weight bold
+    margin 0 10px
+    border-radius: 10px
+    &:hover
+      background-color #acbb78
+      border-color #acbb78
+      color #ffffff
+      cursor pointer
